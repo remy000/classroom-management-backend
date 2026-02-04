@@ -13,8 +13,6 @@ export const departments=pgTable('departments',{
     name: varchar('name',{length:255}).notNull(),
     description:varchar('description',{length:500}),
     ...timestamps
-
-
 })
 
 export const subjects=pgTable('subjects',{
@@ -24,8 +22,6 @@ export const subjects=pgTable('subjects',{
     code: varchar('code',{length:100}).notNull().unique(),
     description:varchar('description',{length:500}),
     ...timestamps
-
-
 })
 
 const departmentRelations=relations(departments,({many})=>({
